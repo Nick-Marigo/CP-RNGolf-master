@@ -29,6 +29,8 @@ class Play extends Phaser.Scene {
         this.cup.body.setCircle(this.cup.width / 4)
         this.cup.body.setOffset(this.cup.width / 4)
         this.cup.body.setImmovable(true);
+        
+        // I added this because I noticed that the cup would shift slightly sometimes when it was hit by the ball and doing some research into it looks like there is some bug in the arcade physics when its two circles colliding. I know it wasn't a big deal but it was bugging me
         this.cup.setPushable(false)
 
         // add ball
